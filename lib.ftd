@@ -25,8 +25,8 @@ children: $page.c
 
 -- end: ftd.column
 
--- footer: connect@.io
-logo: $assets.files.assets.logo.png
+-- footer: connect@grocify.io
+logo: $assets.files.assets.1[1].png
 text-1: Evolve
 text-2: Support
 text-3: Solution
