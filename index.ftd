@@ -1,99 +1,37 @@
 
 -- import: donita-lemek.github.io/dot_hack/navbar as navbar
+-- import: donita-lemek.github.io/dot_hack/items as items
 -- import: donita-lemek.github.io/dot_hack/lib 
 -- import: donita-lemek.github.io/dot_hack/content as content
 -- import: donita-lemek.github.io/dot_hack/card as card
 -- import: donita-lemek.github.io/dot_hack/fonts as fonts
 -- import: donita-lemek.github.io/dot_hack/colors as colors 
--- lib.page:
 
--- navbar.navbar:
-logo: $assets.files.assets.logo.png
-cta-text-1: Offerings
-cta-text-2: Team
-cta-text-3: Clients
+-- lib.page:
 
 
 -- lib.hero:
-pic: $assets.files.assets.hero.png
-text-1: Designing great  
-color-text: SaaS businesses
-text-2: can be hard 
-text-3:  We empower you to achieve growth by design 
+pic: $assets.files.assets.abc.jpg
+color-text: GROCIFY
+text-2: Delivering Freshness @ your Doorstep.
+
 
 -- lib.body-content:
 
-In the rapidly evolving SaaS industry, differentiation and sustainability are more 
-critical than ever. As a team of seasoned SaaS entrepreneurs, advisors, consultants, and 
-angel investors, we understand the pressure to stand out in a crowded market and the need 
-to attract and retain customers amidst swift technological changes. 
-
-Leveraging our 15 years of experience in building and scaling SaaS businesses—some of 
-which have been acquired by top global software companies—we bring a rich perspective to 
-the unique challenges faced by SaaS startups.
+"**_A cost-effective doorstep monthly supply platform._**"
 
 
 -- end: lib.hero
 
 -- lib.content-section:
 
--- lib.text-with-underline: Who we work with
+-- lib.text-with-underline: PRODUCTS ON DISCOUNT TODAY
 
--- lib.body-content: 
-
-We help SaaS ventures at USD 0.5 to 1 million ARR grow to ARR of USD 5 million and 
-achieve healthy fundamentals.
-
--- lib.image-content:
-pic: $assets.files.assets.who-we-work-with.png
+-- items.items:
 
 -- end: lib.content-section
 
--- lib.content-section:
 
-
-
-
-
--- lib.heading: Our
-highlight-text: Ethos
-
--- lib.ethos-section:
-
--- content.content-with-number: Get out of the building - Empathy is everything
-number: 1
-
-We can only learn human needs—and uncover problem areas—by meeting people where they are. 
-So we engage people in thoughtful dialogue and watch them work and play, in their space, 
-not ours.
-
--- content.content-with-number: Iterate with curiosity
-number: 2
-
-Evolution requires being open to change. Human systems are flexible, should be questioned, 
-and can be altered. We scrutinise assumptions and go all the way back to root causes to 
-begin our explorations.
-
--- content.content-with-number: Don't just talk about it. Make it
-number: 3
-
-Pictures have power. We go out of our way to bring ideas to life through visualisations 
-that shape stories, have meaning, and bolster support.
-
--- content.content-with-number: Have an opinion
-number: 4
-
-Big transformation comes from bold ideas. We bring unique perspectives to the table 
-to help drive great work forward.
-
--- content.content-with-number: Live and die by quality
-number: 5
-
-Work is only as good as the caliber of the people creating it. We scale our team 
-thoughtfully—and pitch who you get—which makes every project team an A team.
-
--- end: lib.ethos-section
-
--- end: lib.content-section
 
 -- end: lib.page
+

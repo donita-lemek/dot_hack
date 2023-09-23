@@ -1,0 +1,69 @@
+-- component items:
+
+-- ftd.row:
+width: fill-container
+wrap: true
+spacing.fixed.px: 20
+align-content: center
+
+-- lib.blog-1: Jaya Rice
+pic: $assets.files.assets.rice.jpeg
+head: Rice
+cta-text: 5kg Jaya Rice 
+
+Rice now selling @ Rs.120
+
+
+-- lib.blog-1:  Green Gram
+pic: $assets.files.assets.green.jpeg
+head: Pulses
+cta-text: 1Kg of Green Gram @ Rs.70
+
+Rice now selling at Rs 70.
+
+-- lib.blog-1:  Sugar
+pic: $assets.files.assets.sugar.jpeg
+head: Sweetner
+cta-text: 1Kg of Sugar  @ Rs.20
+
+Sugar now selling at Rs 20.
+
+
+-- lib.blog-1:  Corriander
+pic: $assets.files.assets.corriander.jpeg
+head: Spices
+cta-text: 1Kg of Corriander  @ Rs.75
+
+Corriander now selling at Rs.75
+
+-- lib.blog-1:  Coconut Oil
+pic: $assets.files.assets.coconut.jpeg
+head: Oil
+cta-text: 1Ltr of Coconut Oil  @ Rs.120
+
+Coconut Oil now selling at Rs.120
+
+-- lib.blog-1:  Sabari Chilly Powder
+pic: $assets.files.assets.chilly.jpeg
+head: Spices
+cta-text: 100g of Sabari Chilly Powder @ Rs.35
+
+Sabari Chilly Powder now selling at Rs.35
+
+-- lib.blog-1:  Sabari Turmeric Powder
+pic: $assets.files.assets.turmeric.jpeg
+head: Spices
+cta-text: 100g of Sabari Turmeric Powder @ Rs.25
+
+Coconut Oil now selling at Rs.25
+
+-- lib.blog-1:  Sabari Sambar Powder
+pic: $assets.files.assets.sambar.jpeg
+head: Masala
+cta-text: 100g of Sabari Sambar Powder @ Rs.40
+
+Sabari Sambar Masala now selling at Rs 40.
+
+-- end: ftd.row
+
+-- end: items

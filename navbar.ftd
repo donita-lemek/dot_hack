@@ -61,8 +61,9 @@ spacing: space-between
 
 -- ftd.image:
 src: $navbar-mobile.logo
-height.fixed.px: 40
+height.fixed.px: 60
 margin-left.px: 8
+link: index.html
 
 -- ftd.image:
 if: { !navbar-mobile.open }
@@ -92,13 +93,13 @@ padding-left.px: 16
 role: $inherited.types.label-small
 margin-top.px: 8
 color: $colors.text-
-link: index.html
+link: consumer
 
 -- ftd.text: $navbar-mobile.cta-text-2
 role: $inherited.types.label-small
 margin-top.px: 8
 color: $colors.text-
-link: index.html#aboutus
+link: producer
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 
@@ -106,7 +107,7 @@ $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 role: $inherited.types.label-small
 margin-top.px: 8
 color: $colors.text-
-link: index.html#sponsors
+link: about
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 
@@ -141,9 +142,9 @@ optional string cta-text-3:
 
 -- ftd.row:
 width: fill-container
+height: hug-content
 spacing: space-around
 padding.vh: 1
-height.fixed.vh: 10
 background.solid: $colors.base-
 align-content: center
 z-index: 99999
@@ -151,9 +152,10 @@ sticky: true
 
 -- ftd.image:
 src: $navbar-desktop.logo
-height.fixed.px: 64
+height.fixed.px: 125
 padding.vh: 1
 align-self: center
+link: index.html
 
 -- ftd.row:
 height: fill-container
@@ -162,15 +164,15 @@ spacing.fixed.px: 16
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-1
-cta-text-url: index.html
+cta-text-url: consumer
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-2
-cta-text-url: index.html#aboutus
+cta-text-url: producer
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-3
-cta-text-url: index.html#sponsors
+cta-text-url: about
 
 
 -- end: ftd.row

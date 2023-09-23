@@ -1,0 +1,20 @@
+-- import: donita-lemek.github.io/dot_hack/lib 
+
+-- lib.page:
+
+
+-- lib.heading-1:
+head: Consumer Login
+
+-- lib.login-2: Sign in
+username: Username
+$isActive-1: false
+forgot-password-link: consumer-portal
+register-link: consumer portal
+login-link: consumer-portal
+forgot-text: Reset Password
+login-text: Sign in
+register-text: Sign up
+new-user-text: Don't have an account?
+
+-- end: lib.page
