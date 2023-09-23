@@ -8,9 +8,9 @@ head: Producer Login
 -- lib.login-2: Sign in
 username: Username
 $isActive-1: false
-forgot-password-link: https://static.wikia.nocookie.net/3bb36e97-fbef-4bea-9dba-637f8e6f394b
-register-link: https://static.wikia.nocookie.net/3bb36e97-fbef-4bea-9dba-637f8e6f394b
-login-link: https://static.wikia.nocookie.net/7f0c530b-b10a-41bc-b363-aa34b9fdc27e
+forgot-password-link: producer-portal
+register-link: producer-portal
+login-link: producer-portal
 forgot-text: Reset Password
 login-text: Sign in
 register-text: Sign up
