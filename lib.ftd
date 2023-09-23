@@ -1,0 +1,669 @@
+-- import: donita-lemek.github.io/dot_hack/fonts as fonts
+-- import: donita-lemek.github.io/dot_hack/colors as colors 
+
+
+-- component page:
+children c:
+
+-- ftd.column:
+width: fill-container
+types: $fonts.types
+background.solid: $colors.base-
+
+-- ftd.column:
+width: fill-container
+children: $page.c
+
+-- end: ftd.column
+
+-- footer: connect@PojectX.io
+logo: $assets.files.assets.logo.png
+text-1: Contact 
+text-2: Contribute
+text-3: Solution
+text-4: Help
+
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+
+-- component hero:
+ftd.image-src pic:
+string text-1:
+string color-text:
+string text-2:
+string text-3:
+children content:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+
+-- hero-mobile:
+if: { ftd.device == "mobile" }
+pic: $hero.pic
+text-1: $hero.text-1
+color-text: $hero.color-text
+text-2: $hero.text-2
+text-3: $hero.text-3
+content: $$hero.content
+
+-- hero-desktop:
+if: { ftd.device == "desktop" }
+pic: $hero.pic
+text-1: $hero.text-1
+color-text: $hero.color-text
+text-2: $hero.text-2
+text-3: $hero.text-3
+content: $$hero.content
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+-- component hero-mobile:
+ftd.image-src pic:
+string text-1:
+string color-text:
+string text-2:
+string text-3:
+children content:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+
+-- ftd.column:
+align-content: center
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.text: $hero-mobile.text-1
+role: $inherited.types.heading-medium
+style: light
+text-align: center
+color: $colors.text-
+
+-- ftd.text: $hero-mobile.color-text
+role: $inherited.types.heading-medium
+style: regular
+color: $colors.accent-primary-
+text-align: center
+
+-- ftd.text: $hero-mobile.text-2
+role: $inherited.types.heading-medium
+style: light
+text-align: center
+color: $colors.text-
+
+-- ftd.text: $hero-mobile.text-3
+role: $inherited.types.heading-medium
+style: semi-bold
+text-align: center
+color: $colors.text-
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-mobile.pic
+width.fixed.percent: 90
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+children: $hero-mobile.content
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-mobile
+
+
+
+
+
+
+
+
+
+-- component hero-desktop:
+ftd.image-src pic:
+string text-1:
+string color-text:
+string text-2:
+string text-3:
+children content:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+
+-- ftd.row:
+align-content: center
+margin-top.px: 48
+margin-horizontal.px: 256
+spacing.fixed.px: 32
+
+-- ftd.image:
+src: $hero-desktop.pic
+width.fixed.percent: 90
+
+-- ftd.column:
+align-content: center
+align-self: center
+
+-- ftd.row:
+wrap: true
+
+-- ftd.text: $hero-desktop.text-1
+role: $inherited.types.heading-medium
+style: light
+color: $colors.text-
+
+-- ftd.text: $hero-desktop.color-text
+role: $inherited.types.heading-medium
+style: regular
+color: $colors.accent-primary-
+
+-- ftd.text: $hero-desktop.text-2
+role: $inherited.types.heading-medium
+style: hairline
+color: $colors.text-
+
+-- end: ftd.row
+
+-- ftd.text: $hero-desktop.text-3
+role: $inherited.types.heading-medium
+style: semi-bold
+color: $colors.text-
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.column:
+margin-horizontal.px: 256
+
+-- ftd.row:
+width: fill-container
+children: $hero-desktop.content
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-desktop
+
+
+
+
+
+
+
+
+
+-- component body-content:
+body body:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding.px: 24
+
+-- ftd.text:
+role: $inherited.types.label-small
+text-align if { ftd.device == "mobile"}: center
+color: $colors.text-
+
+$body-content.body
+
+-- end: ftd.column
+
+-- end: body-content
+
+
+
+
+
+
+
+
+
+-- component text-with-underline:
+caption text:
+
+-- ftd.column:
+border-bottom-width.px: 4
+border-color: $colors.accent-primary-
+
+-- ftd.text: $text-with-underline.text
+role: $inherited.types.heading-small
+text-align: center
+color: $colors.text-
+
+-- end: ftd.column
+
+-- end: text-with-underline
+
+
+
+
+
+
+
+
+
+-- component heading:
+optional caption pre-text:
+optional string highlight-text:
+optional string post-text:
+
+
+-- ftd.row:
+spacing.fixed.px: 8
+margin-bottom.px: 16
+align-content: center
+wrap: true
+
+-- ftd.text: $heading.pre-text
+if: { heading.pre-text != NULL }
+role: $inherited.types.heading-small
+style: regular
+text-align: center
+color: $colors.text-
+
+-- text-with-underline: $heading.highlight-text
+if: { heading.highlight-text != NULL }
+
+-- ftd.text: $heading.post-text
+if: { heading.post-text != NULL }
+role: $inherited.types.heading-small
+style: regular
+text-align: center
+color: $colors.text-
+
+-- end: ftd.row
+
+-- end: heading
+
+
+
+
+
+
+
+
+
+-- component content-section:
+children c:
+
+-- ftd.column:
+width: fill-container
+margin-vertical.vh: 5
+align-content: center
+children: $content-section.c
+
+-- end: ftd.column
+
+-- end: content-section
+
+
+
+
+
+
+
+
+
+-- component card-section:
+children c:
+
+-- ftd.row:
+width: fill-container
+align-content: center
+spacing.fixed.px: 32
+children: $card-section.c
+wrap: true
+
+-- end: ftd.row
+
+-- end: card-section
+
+
+
+
+
+
+
+
+
+-- component client-section:
+children c:
+
+-- ftd.row:
+width: fill-container
+align-content: center
+padding-horizontal.px: 200
+spacing.fixed.px: 32
+children: $client-section.c
+wrap: true
+
+-- end: ftd.row
+
+-- end: client-section
+
+
+
+
+
+
+
+
+
+-- component ethos-section:
+children c:
+
+-- ftd.column:
+margin-horizontal.px: 96
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 64
+align-content: center
+children: $ethos-section.c
+wrap: true
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ethos-section
+
+
+
+
+
+
+
+
+-- component image-content:
+ftd.image-src pic:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.image:
+src: $image-content.pic
+width.fixed.percent: 70
+
+-- end: ftd.column
+
+-- end: image-content
+
+
+
+
+
+
+
+
+
+-- component image-content-2:
+ftd.image-src pic:
+
+-- ftd.column:
+align-content: center
+
+-- ftd.image:
+src: $image-content-2.pic
+max-width.fixed.px: 300
+max-height.fixed.px: 150
+
+-- end: ftd.column
+
+-- end: image-content-2
+
+
+
+
+
+
+
+
+
+-- component footer:
+ftd.image-src logo:
+caption cta-text:
+string text-1:
+string text-2:
+string text-3:
+string text-4:
+string text-5:
+string text-6:
+optional string text-7:
+optional string text-8:
+
+-- ftd.column:
+width: fill-container
+
+-- footer-mobile:
+if: { ftd.device == "mobile" }
+text-1: $footer.text-1
+text-2: $footer.text-2
+text-3: $footer.text-3
+text-4: $footer.text-4
+text-5: $footer.text-5
+text-6: $footer.text-6
+cta-text: $footer.cta-text
+logo: $footer.logo
+
+-- footer-desktop:
+if: { ftd.device == "desktop" }
+text-1: $footer.text-1
+text-2: $footer.text-2
+text-3: $footer.text-3
+text-4: $footer.text-4
+text-5: $footer.text-5
+text-6: $footer.text-6
+cta-text: $footer.cta-text
+logo: $footer.logo
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+-- component footer-mobile:
+ftd.image-src logo:
+caption cta-text:
+string text-1:
+string text-2:
+string text-3:
+string text-4:
+string text-5:
+string text-6:
+optional string text-7:
+optional string text-8:
+
+-- ftd.column:
+width: fill-container
+spacing: space-around
+padding.vh: 1
+align-content: center
+
+-- ftd.column:
+
+
+-- ftd.image:
+src: $footer-mobile.logo
+height.fixed.px: 64
+padding.vh: 1
+align-self: center
+
+-- ftd.text: $footer-mobile.cta-text
+role: $inherited.types.label-large
+align-self: center
+color: $colors.text-
+
+-- ftd.row:
+spacing.fixed.px: 12
+height: fill-container
+align-content: center
+wrap: true
+
+-- ftd.text: $footer-mobile.text-1
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-mobile.text-2
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-mobile.text-3
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-mobile.text-4
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-mobile.text-5
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-mobile.text-6
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: footer-mobile
+
+
+
+
+
+
+
+
+
+-- component footer-desktop:
+ftd.image-src logo:
+caption cta-text:
+string text-1:
+string text-2:
+string text-3:
+string text-4:
+string text-5:
+string text-6:
+optional string text-7:
+optional string text-8:
+
+-- ftd.column:
+width: fill-container
+spacing: space-around
+padding.vh: 1
+align-content: center
+
+-- ftd.row:
+margin-horizontal.px: 256
+spacing.fixed.px: 24
+
+-- ftd.image:
+src: $footer-desktop.logo
+height.fixed.px: 64
+padding.vh: 1
+align-self: center
+
+-- ftd.text: $footer-desktop.cta-text
+role: $inherited.types.label-large
+align-self: center
+color: $colors.text-
+
+-- ftd.row:
+spacing.fixed.px: 12
+height: fill-container
+align-self: center
+
+-- ftd.text: $footer-desktop.text-1
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-desktop.text-2
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-desktop.text-3
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-desktop.text-4
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-desktop.text-5
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- ftd.text: $footer-desktop.text-6
+role: $inherited.types.label-small
+align-self: center
+color: $colors.text-
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer-desktop
