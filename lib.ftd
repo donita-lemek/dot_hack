@@ -16,13 +16,14 @@ children: $page.c
 
 -- end: ftd.column
 
--- footer: connect@PojectX.io
+-- footer: connect@betacrafts.io
 logo: $assets.files.assets.logo.png
-text-1: Contact 
-text-2: Contribute
+text-1: Evolve
+text-2: Offerings
 text-3: Solution
-text-4: Help
-
+text-4: Sectors
+text-5: Assistance
+text-6: Ethos
 
 -- end: ftd.column
 

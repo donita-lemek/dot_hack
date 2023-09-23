@@ -1,0 +1,260 @@
+-- import: donita-lemek.github.io/dot_hack/colors as colors 
+
+-- component navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-text-6:
+
+
+-- ftd.column:
+width: fill-container
+z-index: 1000
+sticky: true
+
+-- navbar-mobile:
+if: { ftd.device == "mobile" }
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-text-6: $navbar.cta-text-6
+logo: $navbar.logo
+
+
+-- navbar-desktop:
+if: { ftd.device == "desktop" }
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-text-6: $navbar.cta-text-6
+logo: $navbar.logo
+
+-- end: ftd.column
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component navbar-mobile:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-text-6:
+ftd.image-src menu: $assets.files.assets.nav_icon_mobile.png
+ftd.image-src close: $assets.files.assets.close_black.png
+boolean $open: false
+
+-- ftd.column:
+padding.px: 8
+width: fill-container
+background.solid: $colors.base-
+height: hug-content
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.image:
+src: $navbar-mobile.logo
+height.fixed.px: 40
+margin-left.px: 8
+
+-- ftd.image:
+if: { !navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+
+-- ftd.image:
+if: { navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { navbar-mobile.open }
+margin-top.px: 16
+width: fill-container
+spacing.fixed.px: 8
+align-content: left
+padding-left.px: 16
+
+-- ftd.text: $navbar-mobile.cta-text-1
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html
+
+-- ftd.text: $navbar-mobile.cta-text-2
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html#aboutus
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+
+-- ftd.text: $navbar-mobile.cta-text-3
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html#sponsors
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.text: $navbar-mobile.cta-text-4
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html#participate
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.text: $navbar-mobile.cta-text-5
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html#participate
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.text: $navbar-mobile.cta-text-6
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: index.html#participate
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 24
+spacing.fixed.px: 8
+align-content: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-mobile
+
+
+
+
+
+
+
+
+
+
+-- component navbar-desktop:
+ftd.image-src logo:
+optional string cta-text-1:
+optional string cta-text-2:
+optional string cta-text-3:
+optional string cta-text-4:
+optional string cta-text-5:
+optional string cta-text-6:
+
+-- ftd.row:
+width: fill-container
+spacing: space-around
+padding.vh: 1
+height.fixed.vh: 10
+background.solid: $colors.base-
+align-content: center
+z-index: 99999
+sticky: true
+
+-- ftd.image:
+src: $navbar-desktop.logo
+height.fixed.px: 64
+padding.vh: 1
+align-self: center
+
+-- ftd.row:
+height: fill-container
+spacing.fixed.px: 16
+
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-1
+cta-text-url: index.html
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-2
+cta-text-url: index.html#aboutus
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-3
+cta-text-url: index.html#sponsors
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-4
+cta-text-url: index.html#participate
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-5
+cta-text-url: index.html#participate
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-6
+cta-text-url: index.html#participate
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar-desktop
+
+
+
+
+
+
+
+
+
+
+-- component navbar-text:
+boolean $is-active: false
+string cta-text:
+string cta-text-url:
+
+-- ftd.column:
+height: fill-container
+align-content: center
+margin-horizontal.vh: 2
+border-top-width.px if { navbar-text.is-active }: 4
+border-color: $colors.accent-primary-
+$on-mouse-enter$: $ftd.set-bool($a = $navbar-text.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar-text.is-active, v = false)
+
+-- ftd.text: $navbar-text.cta-text
+role: $inherited.types.label-small
+color: $colors.cta-primary-text-
+color if { navbar-text.is-active } : $colors.accent-primary-
+align-self: center
+link: $$navbar-text.cta-text-url
+
+-- end: ftd.column
+
+-- end: navbar-text
