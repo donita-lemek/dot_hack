@@ -9,10 +9,8 @@ favicon: /-/donita-lemek.github.io/dot_hack/favicon.ico
 
 -- fastn.auto-import: donita-lemek.github.io/dot_hack/FASTN/ds
 -- fastn.auto-import: donita-lemek.github.io/dot_hack/assets
+-- fastn.auto-import: donita-lemek.github.io/dot_hack/lib
+
 -- fastn.auto-import: doc-site
 
--- fastn.sitemap:
 
-# Home: index.html
-
-- Right Sidebar Sample: /sidebar/
