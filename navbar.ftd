@@ -5,9 +5,6 @@ ftd.image-src logo:
 string cta-text-1:
 string cta-text-2:
 string cta-text-3:
-string cta-text-4:
-string cta-text-5:
-string cta-text-6:
 
 
 -- ftd.column:
@@ -20,9 +17,6 @@ if: { ftd.device == "mobile" }
 cta-text-1: $navbar.cta-text-1
 cta-text-2: $navbar.cta-text-2
 cta-text-3: $navbar.cta-text-3
-cta-text-4: $navbar.cta-text-4
-cta-text-5: $navbar.cta-text-5
-cta-text-6: $navbar.cta-text-6
 logo: $navbar.logo
 
 
@@ -31,9 +25,6 @@ if: { ftd.device == "desktop" }
 cta-text-1: $navbar.cta-text-1
 cta-text-2: $navbar.cta-text-2
 cta-text-3: $navbar.cta-text-3
-cta-text-4: $navbar.cta-text-4
-cta-text-5: $navbar.cta-text-5
-cta-text-6: $navbar.cta-text-6
 logo: $navbar.logo
 
 -- end: ftd.column
@@ -54,9 +45,6 @@ ftd.image-src logo:
 string cta-text-1:
 string cta-text-2:
 string cta-text-3:
-string cta-text-4:
-string cta-text-5:
-string cta-text-6:
 ftd.image-src menu: $assets.files.assets.nav_icon_mobile.png
 ftd.image-src close: $assets.files.assets.close_black.png
 boolean $open: false
@@ -121,26 +109,6 @@ color: $colors.text-
 link: index.html#sponsors
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
--- ftd.text: $navbar-mobile.cta-text-4
-role: $inherited.types.label-small
-margin-top.px: 8
-color: $colors.text-
-link: index.html#participate
-$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
-
--- ftd.text: $navbar-mobile.cta-text-5
-role: $inherited.types.label-small
-margin-top.px: 8
-color: $colors.text-
-link: index.html#participate
-$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
-
--- ftd.text: $navbar-mobile.cta-text-6
-role: $inherited.types.label-small
-margin-top.px: 8
-color: $colors.text-
-link: index.html#participate
-$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 -- ftd.row:
 width: fill-container
@@ -170,9 +138,6 @@ ftd.image-src logo:
 optional string cta-text-1:
 optional string cta-text-2:
 optional string cta-text-3:
-optional string cta-text-4:
-optional string cta-text-5:
-optional string cta-text-6:
 
 -- ftd.row:
 width: fill-container
@@ -207,17 +172,6 @@ cta-text-url: index.html#aboutus
 cta-text: $navbar-desktop.cta-text-3
 cta-text-url: index.html#sponsors
 
--- navbar-text: 
-cta-text: $navbar-desktop.cta-text-4
-cta-text-url: index.html#participate
-
--- navbar-text: 
-cta-text: $navbar-desktop.cta-text-5
-cta-text-url: index.html#participate
-
--- navbar-text: 
-cta-text: $navbar-desktop.cta-text-6
-cta-text-url: index.html#participate
 
 -- end: ftd.row
 
