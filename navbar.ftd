@@ -152,7 +152,7 @@ sticky: true
 
 -- ftd.image:
 src: $navbar-desktop.logo
-height.fixed.px: 125
+height.fixed.px: 90
 padding.vh: 1
 align-self: center
 link: index.html

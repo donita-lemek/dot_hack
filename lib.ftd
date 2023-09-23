@@ -164,7 +164,7 @@ background.solid: #1f601f
 -- ftd.image:
 src: $hero-desktop.pic
 width.fixed.percent: 90
-height.fixed.px: 250
+height.fixed.px: 300
 
 -- ftd.column:
 align-content: center
