@@ -2,6 +2,7 @@
 
 -- lib.page:
 
--- ftd.text: Coming Soon
+-- lib.underwork:
+pic: $assets.files.assets.site.jpg
 
 -- end: lib.page

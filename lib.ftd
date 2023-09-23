@@ -942,3 +942,23 @@ min-width.fixed.px: 120
 -- end: ftd.row
 
 -- end: tablerow
+
+
+
+
+
+
+
+
+
+
+-- component underwork:
+ftd.image-src pic:
+
+-- ftd.column:
+
+-- ftd.image: $underwork.pic
+
+-- end: ftd.column
+
+-- end: underwork
