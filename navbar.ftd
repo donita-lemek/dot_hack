@@ -40,90 +40,90 @@ logo: $navbar.logo
 
 
 
-;; -- component navbar-mobile:
-;; ftd.image-src logo:
-;; string cta-text-1:
-;; string cta-text-2:
-;; string cta-text-3:
-;; ftd.image-src menu: $assets.files.assets.nav_icon_mobile.png
-;; ftd.image-src close: $assets.files.assets.close_black.png
-;; boolean $open: false
+-- component navbar-mobile:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+ftd.image-src menu: $assets.files.assets.logo.jpg
+ftd.image-src close: $assets.files.assets.logo.jpg
+boolean $open: false
 
-;; -- ftd.column:
-;; padding.px: 8
-;; width: fill-container
-;; background.solid: $colors.base-
-;; height: hug-content
+-- ftd.column:
+padding.px: 8
+width: fill-container
+background.solid: $colors.base-
+height: hug-content
 
-;; -- ftd.row:
-;; width: fill-container
-;; spacing: space-between
+-- ftd.row:
+width: fill-container
+spacing: space-between
 
-;; -- ftd.image:
-;; src: $navbar-mobile.logo
-;; height.fixed.px: 60
-;; margin-left.px: 8
-;; link: index.html
+-- ftd.image:
+src: $navbar-mobile.logo
+height.fixed.px: 60
+margin-left.px: 8
+link: index.html
 
-;; -- ftd.image:
-;; if: { !navbar-mobile.open }
-;; height.fixed.px: 16
-;; align-self: center
-;; src: $navbar-mobile.menu
-;; $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+-- ftd.image:
+if: { !navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
 
-;; -- ftd.image:
-;; if: { navbar-mobile.open }
-;; height.fixed.px: 16
-;; align-self: center
-;; src: $navbar-mobile.close
-;; $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+-- ftd.image:
+if: { navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
-;; -- end: ftd.row
+-- end: ftd.row
 
-;; -- ftd.column:
-;; if: { navbar-mobile.open }
-;; margin-top.px: 16
-;; width: fill-container
-;; spacing.fixed.px: 8
-;; align-content: left
-;; padding-left.px: 16
+-- ftd.column:
+if: { navbar-mobile.open }
+margin-top.px: 16
+width: fill-container
+spacing.fixed.px: 8
+align-content: left
+padding-left.px: 16
 
-;; -- ftd.text: $navbar-mobile.cta-text-1
-;; role: $inherited.types.label-small
-;; margin-top.px: 8
-;; color: $colors.text-
-;; link: consumer
+-- ftd.text: $navbar-mobile.cta-text-1
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: consumer
 
-;; -- ftd.text: $navbar-mobile.cta-text-2
-;; role: $inherited.types.label-small
-;; margin-top.px: 8
-;; color: $colors.text-
-;; link: producer
-;; $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
-
-
-;; -- ftd.text: $navbar-mobile.cta-text-3
-;; role: $inherited.types.label-small
-;; margin-top.px: 8
-;; color: $colors.text-
-;; link: about
-;; $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+-- ftd.text: $navbar-mobile.cta-text-2
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: producer
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 
-;; -- ftd.row:
-;; width: fill-container
-;; margin-top.px: 24
-;; spacing.fixed.px: 8
-;; align-content: center
+-- ftd.text: $navbar-mobile.cta-text-3
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: about
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
-;; -- end: ftd.row
 
-;; -- end: ftd.column
+-- ftd.row:
+width: fill-container
+margin-top.px: 24
+spacing.fixed.px: 8
+align-content: center
 
-;; -- end: ftd.column
+-- end: ftd.row
 
-;; -- end: navbar-mobile
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-mobile
 
 
 
