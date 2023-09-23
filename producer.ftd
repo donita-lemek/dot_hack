@@ -9,8 +9,8 @@ head: Producer Login
 username: Username
 $isActive-1: false
 forgot-password-link: producer-portal
-register-link: producer-portal
-login-link: producer-portal
+register-link: product-portal
+login-link: product-portal
 forgot-text: Reset Password
 login-text: Sign in
 register-text: Sign up
