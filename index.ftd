@@ -1,1 +1,37 @@
 
+-- import: donita-lemek.github.io/dot_hack/navbar as navbar
+-- import: donita-lemek.github.io/dot_hack/items as items
+-- import: donita-lemek.github.io/dot_hack/lib 
+-- import: donita-lemek.github.io/dot_hack/content as content
+-- import: donita-lemek.github.io/dot_hack/card as card
+-- import: donita-lemek.github.io/dot_hack/fonts as fonts
+-- import: donita-lemek.github.io/dot_hack/colors as colors 
+
+-- lib.page:
+
+
+-- lib.hero:
+pic: $assets.files.assets.abc.jpg
+color-text: GROCIFY
+text-2: Delivering Freshness @ your Doorstep.
+
+
+-- lib.body-content:
+
+"**_A cost-effective doorstep monthly supply platform._**"
+
+
+-- end: lib.hero
+
+-- lib.content-section:
+
+-- lib.text-with-underline: PRODUCTS ON DISCOUNT TODAY
+
+-- items.items:
+
+-- end: lib.content-section
+
+
+
+-- end: lib.page
+

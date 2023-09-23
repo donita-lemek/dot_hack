@@ -6,6 +6,9 @@ favicon: /-/donita-lemek.github.io/dot_hack/favicon.ico
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
+-- fastn.dependency: fifthtry.github.io/admint-nunito-font/assets 
+-- fastn.dependency: fifthtry.github.io/inter-font
+-- fastn.dependency: fifthtry.github.io/admint-nunito-font
 
 -- fastn.auto-import: donita-lemek.github.io/dot_hack/FASTN/ds
 -- fastn.auto-import: donita-lemek.github.io/dot_hack/assets

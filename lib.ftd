@@ -1,5 +1,6 @@
 -- import: donita-lemek.github.io/dot_hack/fonts as fonts
 -- import: donita-lemek.github.io/dot_hack/colors as colors 
+-- import: donita-lemek.github.io/dot_hack/navbar as navbar
 
 
 -- component page:
@@ -8,22 +9,30 @@ children c:
 -- ftd.column:
 width: fill-container
 types: $fonts.types
-background.solid: $colors.base-
+background.solid:#e6ffe6
+
+-- navbar.navbar:
+logo: $assets.files.assets.1[1].png
+cta-text-1: CONSUMER
+cta-text-2: PRODUCER
+cta-text-3: DATA
 
 -- ftd.column:
 width: fill-container
+height: hug-content
+align-content: center
 children: $page.c
 
 -- end: ftd.column
 
--- footer: connect@PojectX.io
-logo: $assets.files.assets.logo.png
-text-1: Contact 
-text-2: Contribute
+-- footer: connect@grocify.io
+logo: $assets.files.assets.1[1].png
+text-1: Evolve
+text-2: Support
 text-3: Solution
-text-4: Help
-
-
+text-4: Team
+text-5: More Info
+text-6: help
 -- end: ftd.column
 
 -- end: page
@@ -39,10 +48,8 @@ text-4: Help
 
 -- component hero:
 ftd.image-src pic:
-string text-1:
 string color-text:
 string text-2:
-string text-3:
 children content:
 
 -- ftd.column:
@@ -53,19 +60,15 @@ align-content: center
 -- hero-mobile:
 if: { ftd.device == "mobile" }
 pic: $hero.pic
-text-1: $hero.text-1
 color-text: $hero.color-text
 text-2: $hero.text-2
-text-3: $hero.text-3
 content: $$hero.content
 
 -- hero-desktop:
 if: { ftd.device == "desktop" }
 pic: $hero.pic
-text-1: $hero.text-1
 color-text: $hero.color-text
 text-2: $hero.text-2
-text-3: $hero.text-3
 content: $$hero.content
 
 -- end: ftd.column
@@ -82,10 +85,8 @@ content: $$hero.content
 
 -- component hero-mobile:
 ftd.image-src pic:
-string text-1:
 string color-text:
 string text-2:
-string text-3:
 children content:
 
 -- ftd.column:
@@ -100,11 +101,7 @@ align-content: center
 align-content: center
 align-self: center
 
--- ftd.text: $hero-mobile.text-1
-role: $inherited.types.heading-medium
-style: light
-text-align: center
-color: $colors.text-
+
 
 -- ftd.text: $hero-mobile.color-text
 role: $inherited.types.heading-medium
@@ -113,16 +110,12 @@ color: $colors.accent-primary-
 text-align: center
 
 -- ftd.text: $hero-mobile.text-2
-role: $inherited.types.heading-medium
-style: light
+role: $inherited.types.heading-large
+style: bold
 text-align: center
 color: $colors.text-
 
--- ftd.text: $hero-mobile.text-3
-role: $inherited.types.heading-medium
-style: semi-bold
-text-align: center
-color: $colors.text-
+
 
 -- end: ftd.column
 
@@ -152,10 +145,8 @@ children: $hero-mobile.content
 
 -- component hero-desktop:
 ftd.image-src pic:
-string text-1:
 string color-text:
 string text-2:
-string text-3:
 children content:
 
 -- ftd.column:
@@ -168,10 +159,12 @@ align-content: center
 margin-top.px: 48
 margin-horizontal.px: 256
 spacing.fixed.px: 32
+background.solid: #1f601f
 
 -- ftd.image:
 src: $hero-desktop.pic
 width.fixed.percent: 90
+height.fixed.px: 250
 
 -- ftd.column:
 align-content: center
@@ -180,27 +173,21 @@ align-self: center
 -- ftd.row:
 wrap: true
 
--- ftd.text: $hero-desktop.text-1
-role: $inherited.types.heading-medium
-style: light
-color: $colors.text-
+
 
 -- ftd.text: $hero-desktop.color-text
 role: $inherited.types.heading-medium
 style: regular
-color: $colors.accent-primary-
+color: #b2e6b2
 
 -- ftd.text: $hero-desktop.text-2
-role: $inherited.types.heading-medium
-style: hairline
-color: $colors.text-
+role: $inherited.types.heading-small
+style: bold
+color: #b2e6b2
 
 -- end: ftd.row
 
--- ftd.text: $hero-desktop.text-3
-role: $inherited.types.heading-medium
-style: semi-bold
-color: $colors.text-
+
 
 -- end: ftd.column
 
@@ -235,10 +222,10 @@ body body:
 -- ftd.column:
 width: fill-container
 align-content: center
-padding.px: 24
+padding.px: 40
 
 -- ftd.text:
-role: $inherited.types.label-small
+role: $inherited.types.copy-large
 text-align if { ftd.device == "mobile"}: center
 color: $colors.text-
 
@@ -261,10 +248,10 @@ caption text:
 
 -- ftd.column:
 border-bottom-width.px: 4
-border-color: $colors.accent-primary-
+border-color:#000080
 
 -- ftd.text: $text-with-underline.text
-role: $inherited.types.heading-small
+role: $inherited.types.heading-medium
 text-align: center
 color: $colors.text-
 
@@ -288,7 +275,7 @@ optional string post-text:
 
 -- ftd.row:
 spacing.fixed.px: 8
-margin-bottom.px: 16
+margin-bottom.px: 40
 align-content: center
 wrap: true
 
@@ -304,7 +291,7 @@ if: { heading.highlight-text != NULL }
 
 -- ftd.text: $heading.post-text
 if: { heading.post-text != NULL }
-role: $inherited.types.heading-small
+role: $inherited.types.heading-large
 style: regular
 text-align: center
 color: $colors.text-
@@ -667,3 +654,291 @@ color: $colors.text-
 -- end: ftd.column
 
 -- end: footer-desktop
+
+
+
+
+
+
+
+
+
+
+-- component login-2:
+caption title:
+string username:
+boolean $isActive-1: false
+string forgot-password-link:
+string register-link:
+string login-link:
+string forgot-text:
+string login-text:
+string register-text:
+string new-user-text:
+
+-- ftd.row:
+background.solid: #222222
+padding-horizontal.px: 20
+align-content: center
+border-radius.px: 20
+border-color: #ffff00
+border-width.px: 5
+
+-- ftd.column:
+align-content: center
+padding-horizontal.px: 30
+
+-- ftd.text: $login-2.title
+role: $inherited.types.heading-medium
+color: #ffffff
+
+-- end: ftd.column
+
+-- ftd.container:
+;;height.fixed.px: 300
+width.fixed.px: 2
+background.solid: #ffff00
+
+-- ftd.column:
+align-content: center
+spacing: space-evenly
+width.fixed.px: 300
+border-radius.px: 20
+padding-horizontal.px: 30
+
+-- ftd.container:
+height.fixed.px: 25
+
+-- ftd.text-input:
+placeholder: Username
+width.fixed.percent: 100
+margin-vertical.px: 10
+padding-horizontal.px: 10
+padding-vertical.px: 10
+border-radius.px: 10
+background.solid: #333333
+color: #ffffff
+
+-- ftd.text-input:
+border-radius.px: 10
+placeholder: Password
+width.fixed.percent: 100
+margin-vertical.px: 10
+padding-horizontal.px: 10
+padding-vertical.px: 10
+type: password
+background.solid: #333333
+color: #ffffff
+
+-- ftd.text: $login-2.forgot-text
+width.fixed.percent: 100
+role: $inherited.types.label-large
+text-align: end
+color: #ffff00
+link: $login-2.forgot-password-link
+
+-- ftd.text: $login-2.login-text
+role: 
+color: #ffffff
+text-align: center
+width.fixed.percent: 60
+margin.px: 20
+padding-vertical.px: 10
+border-radius.px: 20
+background.solid: $inherited.colors.background.base
+background.solid if {login-2.isActive-1}: $inherited.colors.cta-primary.hover
+$on-mouse-enter$: $ftd.set-bool($a = $login-2.isActive-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $login-2.isActive-1, v = false)
+link: $login-2.login-link
+
+-- ftd.row:
+margin-vertical.px: 10
+
+-- ftd.text: $login-2.new-user-text
+role: $inherited.types.label-large
+color: #ffffff
+display: inline
+
+-- ftd.container:
+width.fixed.px: 5
+
+-- ftd.text: $login-2.register-text
+role: $inherited.types.label-large
+color: #ffff00
+display: inline
+link: $login-2.register-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: login-2
+
+
+
+
+
+
+
+
+
+
+-- component heading-1:
+string head:
+
+-- ftd.row:
+width: fill-container
+align-content: center
+-- ftd.text: $heading-1.head
+color: #00004d
+role: $inherited.types.heading-medium
+   
+
+-- end: ftd.row
+
+
+-- end: heading-1
+
+
+
+
+
+
+
+
+
+-- component blog-1:
+caption title:
+string head:
+ftd.image-src pic:
+string cta-text:
+body body:
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+max-width.fixed.percent: 25
+margin-vertical.px: 32
+
+-- ftd.image:
+src: $blog-1.pic
+width: fill-container
+height.fixed.px: 300
+fit: contain
+
+-- ftd.column:
+padding.px: 24
+
+-- ftd.text: $blog-1.head
+role: $inherited.types.label-small
+color: $inherited.colors.custom.one
+margin-bottom.px: 4
+
+-- ftd.text: $blog-1.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 12
+
+-- ftd.text: $blog-1.body
+role: $inherited.types.label-large
+color: $inherited.colors.text
+
+-- ftd.text: $blog-1.cta-text
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: blog-1
+
+-- component user:
+string head:
+
+-- ftd.row:
+width: fill-container
+align-content: right
+-- ftd.text: $user.head
+color: #00004d
+role: $inherited.types.heading-small
+   
+
+-- end: ftd.row
+
+
+-- end: user
+
+
+
+
+-- component table:
+children c:
+
+-- ftd.column:
+width: fill-container
+margin-horizontal.px: 64
+padding-horizontal.px: 24
+
+-- ftd.column:
+children: $table.c
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: table
+
+
+
+
+
+-- component tablerow:
+string text-1:
+string text-2:
+string text-3:
+string text-4:
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+align-content: center
+padding.px: 20
+min-width.fixed.px: 120
+
+-- ftd.text: $tablerow.text-1
+
+-- end: ftd.column
+
+-- ftd.column:
+padding.px: 20
+align-content: center
+min-width.fixed.px: 120
+
+-- ftd.text: $tablerow.text-2
+
+-- end: ftd.column
+
+-- ftd.column:
+padding.px: 20
+align-content: center
+min-width.fixed.px: 120
+
+-- ftd.text: $tablerow.text-3
+
+-- end: ftd.column
+
+-- ftd.column:
+padding.px: 20
+align-content: center
+min-width.fixed.px: 120
+
+-- ftd.text: $tablerow.text-4
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: tablerow

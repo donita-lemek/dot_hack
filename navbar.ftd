@@ -1,0 +1,216 @@
+-- import: donita-lemek.github.io/dot_hack/colors as colors 
+
+-- component navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+
+
+-- ftd.column:
+width: fill-container
+z-index: 1000
+sticky: true
+
+-- navbar-mobile:
+if: { ftd.device == "mobile" }
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+logo: $navbar.logo
+
+
+-- navbar-desktop:
+if: { ftd.device == "desktop" }
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+logo: $navbar.logo
+
+-- end: ftd.column
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component navbar-mobile:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+ftd.image-src menu: $assets.files.assets.logo.jpg
+ftd.image-src close: $assets.files.assets.logo.jpg
+boolean $open: false
+
+-- ftd.column:
+padding.px: 8
+width: fill-container
+background.solid: $colors.base-
+height: hug-content
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.image:
+src: $navbar-mobile.logo
+height.fixed.px: 60
+margin-left.px: 8
+link: index.html
+
+-- ftd.image:
+if: { !navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+
+-- ftd.image:
+if: { navbar-mobile.open }
+height.fixed.px: 16
+align-self: center
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { navbar-mobile.open }
+margin-top.px: 16
+width: fill-container
+spacing.fixed.px: 8
+align-content: left
+padding-left.px: 16
+
+-- ftd.text: $navbar-mobile.cta-text-1
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: consumer
+
+-- ftd.text: $navbar-mobile.cta-text-2
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: producer
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+
+-- ftd.text: $navbar-mobile.cta-text-3
+role: $inherited.types.label-small
+margin-top.px: 8
+color: $colors.text-
+link: about
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 24
+spacing.fixed.px: 8
+align-content: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-mobile
+
+
+
+
+
+
+
+
+
+
+-- component navbar-desktop:
+ftd.image-src logo:
+optional string cta-text-1:
+optional string cta-text-2:
+optional string cta-text-3:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+spacing: space-around
+padding.vh: 1
+background.solid: $colors.base-
+align-content: center
+z-index: 99999
+sticky: true
+
+-- ftd.image:
+src: $navbar-desktop.logo
+height.fixed.px: 125
+padding.vh: 1
+align-self: center
+link: index.html
+
+-- ftd.row:
+height: fill-container
+spacing.fixed.px: 16
+
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-1
+cta-text-url: consumer
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-2
+cta-text-url: producer
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-3
+cta-text-url: about
+
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar-desktop
+
+
+
+
+
+
+
+
+
+
+-- component navbar-text:
+boolean $is-active: false
+string cta-text:
+string cta-text-url:
+
+-- ftd.column:
+height: fill-container
+align-content: center
+margin-horizontal.vh: 2
+border-top-width.px if { navbar-text.is-active }: 4
+border-color: $colors.accent-primary-
+$on-mouse-enter$: $ftd.set-bool($a = $navbar-text.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar-text.is-active, v = false)
+
+-- ftd.text: $navbar-text.cta-text
+role: $inherited.types.label-small
+color: $colors.cta-primary-text-
+color if { navbar-text.is-active } : $colors.accent-primary-
+align-self: center
+link: $$navbar-text.cta-text-url
+
+-- end: ftd.column
+
+-- end: navbar-text
